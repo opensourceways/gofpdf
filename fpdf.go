@@ -2743,7 +2743,7 @@ func (f *Fpdf) MultiCell(w, h float64, txtStr, borderStr, alignStr string, fill 
 					f.outf("%.3f Tw", f.ws*f.k)
 				}
 				if f.isCurrentUTF8 {
-					f.CellFormat(w, h, string(srune[j:sep]), b, 2, alignStr, fill, 0, "")
+					f.CellFormat(w, h, string(srune[j:sep+1]), b, 2, alignStr, fill, 0, "")
 				} else {
 					f.CellFormat(w, h, s[j:sep], b, 2, alignStr, fill, 0, "")
 				}
